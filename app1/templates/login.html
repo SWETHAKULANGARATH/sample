@@ -1,0 +1,53 @@
+<html>
+   <title>
+     Forms
+   </title>
+   <head>
+        {% load static %}
+        <style>
+             body{
+                  background-image:url("{% static 'images/beg.jpeg' %}" );
+                  background-repeat:no-repeat;
+                  background-attachment:fixed;
+                  background-size:cover;
+                 }
+             
+        </style>
+  </head>
+   <body>
+      <table border="0"; style="color:white">
+         <tr>
+             <td> <img src="{% static 'images/1.jpeg' %}" alt="#" width="150" height="100"></td>
+             <td><h2>Setup Your Account</h2></td>
+         </tr>
+         <form method="POST" action="/signin/">
+            {% csrf_token %}
+      </table>
+      </br>
+     
+         <table border="0"; width="50%"; style="color:white">
+             <tr>
+              <td align="right">Username</td>
+                 <td><input type="text" name="username" size="30" maxlength="30" value=""></td>
+             </tr>
+             <tr>
+                 <td align="right">Password</td>
+                 <td><input type="password" name="userpassword" size="15"value=""></td> 
+             </tr>
+            
+            
+                
+            <tr>
+                <td>
+             <div align="center">
+                <input type="submit" name="Submit" value="Submit" align="center">
+                </div>
+                </td>
+                </tr>
+            </form>
+          </table>
+         
+       </body>
+</html>
+
+   

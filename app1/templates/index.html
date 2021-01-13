@@ -1,0 +1,77 @@
+<html>
+   <title>
+     Forms
+   </title>
+   <head>
+        {% load static %}
+        <style>
+             body{
+                  background-image:url("{% static 'images/beg.jpeg' %}" );
+                  background-repeat:no-repeat;
+                  background-attachment:fixed;
+                  background-size:cover;
+                 }
+             
+        </style>
+  </head>
+   <body>
+      <table border="0"; style="color:white">
+         <tr>
+             <td> <img src="{% static 'images/1.jpeg' %}" alt="#" width="150" height="100"></td>
+             <td><h2>Setup Your Account</h2></td>
+         </tr>
+         <form method="POST" action="/register/">
+            {% csrf_token %}
+      </table>
+      </br>
+      <p style="color:white"> Make sure to use a valid email address.</p>
+      
+         <table border="0"; width="50%"; style="color:white">
+             <tr>
+                <td align="right">Name   </td>
+                <td><input type="text" name="uname" size="30" maxlength="30" value=""></td>
+             </tr>
+             </br>
+             <tr>
+                <td align="right">Email</td>
+                <td><input type="text" name="uemail" size="30" maxlength="30" value=""></td>
+             </tr>
+             </br>
+             <tr>
+                <td align="right">Address</td>
+                <td><textarea rows="5" cols="50" name="uaddress"></textarea></td> 
+             </tr>  
+             <tr>
+                 <td align="right">Username</td>
+                 <td><input type="text" name="uusername" size="30" maxlength="30" value=""></td>
+             </tr>
+             <tr>
+                 <td align="right">Password</td>
+                 <td><input type="password" name="upassword" size="15"value=""></td> 
+             </tr>
+            
+             <tr>
+                  <td align="right"><td>
+                  <td align="left">COUNTRY<select name="ucountry">
+                           <option value="india">India</option>
+                           <option value="usa">USA</option>
+                           <option value="china">China</option>
+                           <option value="canada">Canada</option>
+                      </select>
+                   </td>
+             </tr>
+             <tr>
+                 <td>
+             <div align="center">
+                <input type="submit" name="Submit" value="Submit" align="center">
+                </div>
+                </td>
+                </tr>
+               
+            </form>
+          </table>
+         
+       </body>
+</html>
+
+   
